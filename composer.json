@@ -1,0 +1,30 @@
+{
+    "name": "helori/laravel-permission",
+    "description": "Define roles and permissions for Laravel users",
+    "keywords": ["laravel", "role", "permission", "auth", "authorization", "authentication", "users"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Helori Lanos",
+            "email": "helori@algoart.fr",
+            "homepage": "http://www.algoart.fr"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/helori/laravel-permission.git"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Helori\\LaravelPermission\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "require-dev": {
+        
+    }
+}
