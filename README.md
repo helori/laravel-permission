@@ -18,6 +18,6 @@ Configure your application:
 
 Publish and run the migrations:
 ```bash
-php artisan vendor:publish --provider="Helori\LaravelAdmin\PermissionServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="Helori\LaravelPermission\PermissionServiceProvider" --tag="migrations"
 php artisan migrate
 ```
