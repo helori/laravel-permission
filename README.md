@@ -14,6 +14,7 @@ Configure your application:
     ...
     Helori\LaravelPermission\PermissionServiceProvider::class,
 ];
+```
 
 Publish and run the migrations:
 ```bash
