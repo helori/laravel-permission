@@ -21,3 +21,32 @@ Publish and run the migrations:
 php artisan vendor:publish --provider="Helori\LaravelPermission\PermissionServiceProvider" --tag="migrations"
 php artisan migrate
 ```
+
+In your app/Providers/AuthServiceProvider.php :
+```php
+use Helori\LaravelPermission\Models\Permission;
+...
+class AuthServiceProvider extends ServiceProvider
+{
+	...
+	public function boot()
+	{
+		...
+		$permissions = Permission::all();
+		foreach($permissions as $permission){
+		    Gate::define($permission->name, function (User $user) use($permission) {
+		        return $user->hasPermission($permission);
+		    });
+		}
+	}
+}
+```
+
+## Usage example
+In your blade template files :
+```html
+@if(Gate::forUser($user)->allows('permission-name'))
+	<div>this is only for allowed users</div>
+@endif
+```
+
